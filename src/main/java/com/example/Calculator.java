@@ -1,4 +1,4 @@
-package main.java.com.example;
+package com.example;
 
 public class Calculator {
 
@@ -6,12 +6,8 @@ public class Calculator {
  
         if(op.equals("add")) { 
             return a + b; 
-        } else if(op.equals("add-again")) { 
-            return a + b; // DUPLICATION 
         } else if(op.equals("sub")) { 
             return a - b; 
-        } else if(op.equals("sub-again")) { 
-            return a - b; // DUPLICATION 
         } else if(op.equals("mul")) { 
             return a * b; 
         } else if(op.equals("div")) { 
@@ -33,17 +29,9 @@ public class Calculator {
         } 
     } 
 
-    // Code Duplication (students must remove)
+    // Addition method
     public int addNumbers(int x, int y) {
         return x + y;
-    }
-
-    public int sumValues(int a, int b) {
-        return a + b;
-    }
-
-    public int addAgain(int a, int b) { 
-return a + b; 
-} 
+    } 
 
 }
