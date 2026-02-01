@@ -1,13 +1,16 @@
 package com.example;
 
-public class App {
+import java.sql.SQLException;
+import java.util.logging.Logger;
 
-   public static void main(String[] args) throws Exception { 
+public class App {
+   private static final Logger logger = Logger.getLogger(App.class.getName());
+
+   public static void main(String[] args) throws SQLException { 
       Calculator calc = new Calculator(); 
-      System.out.println(calc.calculate(10, 5, "add")); 
+      logger.info("Result: " + calc.calculate(10, 5, "add")); 
       UserService service = new UserService(); 
-      service.findUser("admin"); 
-      // service.deleteUser("admin"); // Commented out dangerous call
+      service.findUser("admin");
    } 
 }
 
